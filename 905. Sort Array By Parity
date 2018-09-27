@@ -1,0 +1,17 @@
+class Solution(object):
+    def sortArrayByParity(self, A):
+        """
+        :type A: List[int]
+        :rtype: List[int]
+        """
+        s = []
+        for i in range(0, len(A)):
+            if A[i]%2 == 0:
+                s.append(A[i])
+        for j in range(0, len(A)):
+            if A[j]%2!= 0:
+                s.append(A[j])
+                
+        return s
+                
+            
