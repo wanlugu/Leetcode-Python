@@ -5,21 +5,21 @@ class Solution(object):
         :type y: int
         :rtype: int
         """
-        bx = bin(x)
+        bx = bin(x) # binary format
         by = bin(y)
         lenx = len(bx)
         leny = len(by)
         sum = 0
         if x<=y:
             for i in range(1,lenx-1):
-                if bx[-i] != by[-i]:
+                if bx[-i] != by[-i]:  #compare shorter 
                     sum = sum+1
             for j in range(2,leny-lenx+2):
-                if by[j]== "1":
+                if by[j]== "1":  # be cautious about string format
                     sum = sum+1
         else:
             for i in range(1,leny-1):
-                if bx[-i] != by[-i]:
+                if bx[-i] != by[-i]: 
                     sum = sum+1
             for j in range(2,lenx-leny+2):
                 if bx[j]== "1":
