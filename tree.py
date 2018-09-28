@@ -6,6 +6,11 @@
 # -- inheritance
 # -- polymorphism (many forms)
 
+
+######### BST ################
+# a node consists of key, value, left (smaller) and right (larger) subtree
+# search, insert, get
+
 # create a bianary tree
 class Tree(object):
     def __init__(self):
