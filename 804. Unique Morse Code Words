@@ -1,0 +1,57 @@
+# chr() 用一个范围在 range（256）内的（就是0～255）整数作参数，返回一个对应的ASCII字符
+# unichar()  similar,返回unicode 的字符。
+#print chr(0x30), chr(0x31), chr(0x61)   # 十六进制
+#0 1 a
+#print chr(48), chr(49), chr(97)         # 十进制
+#0 1 a
+#unichr(97)
+#u'a'
+#unichr(98)
+#u'b'
+#ord() is their corresponding fun, taking a string as input, return a integer
+# ord("a")
+# 97  can -97 that is the position of "a" in alphebate
+
+# unique value in string
+# ''.join(set('aaabcabccd'))
+# 'acbd'
+
+# w=[]*10 return w=[], 0 length
+# w=[0]*10 returns len(w)=10
+
+
+###########################################################################################
+International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: "a" maps to ".-", "b" maps to "-...", "c" maps to "-.-.", and so on.
+
+For convenience, the full table for the 26 letters of the English alphabet is given below:
+
+[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+Now, given a list of words, each word can be written as a concatenation of the Morse code of each letter. For example, "cab" can be written as "-.-.-....-", (which is the concatenation "-.-." + "-..." + ".-"). We'll call such a concatenation, the transformation of a word.
+
+Return the number of different transformations among all words we have.
+
+Example:
+Input: words = ["gin", "zen", "gig", "msg"]
+Output: 2
+Explanation: 
+The transformation of each word is:
+"gin" -> "--...-."
+"zen" -> "--...-."
+"gig" -> "--...--."
+"msg" -> "--...--."
+
+There are 2 different transformations, "--...-." and "--...--.".
+##############################################################################################
+class Solution(object):
+    def uniqueMorseRepresentations(self, words):
+        """
+        :type words: List[str]
+        :rtype: int
+        """
+        morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        words_morse = [0]*len(words) #define empty list for result
+        for w in range(0,len(words)): 
+            words_morse[w]=str()
+            for i in range(0,len(words[w])):
+                words_morse[w] = words_morse[w]+ morse[ord(words[w][i])-97]
+        return len(set(words_morse))
