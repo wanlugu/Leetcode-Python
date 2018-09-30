@@ -66,6 +66,7 @@ class Solution2(object):
 
         seen = {"".join(MORSE[ord(c) - ord('a')] for c in word)
                 for word in words}    # ''.join() combine with seperator as ''
+                #{} return the unique values
 
         return len(seen)
         
