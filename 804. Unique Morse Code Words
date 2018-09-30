@@ -55,3 +55,20 @@ class Solution(object):
             for i in range(0,len(words[w])):
                 words_morse[w] = words_morse[w]+ morse[ord(words[w][i])-97]
         return len(set(words_morse))
+
+
+class Solution2(object):
+    def uniqueMorseRepresentations(self, words):
+        MORSE = [".-","-...","-.-.","-..",".","..-.","--.",
+                 "....","..",".---","-.-",".-..","--","-.",
+                 "---",".--.","--.-",".-.","...","-","..-",
+                 "...-",".--","-..-","-.--","--.."]
+
+        seen = {"".join(MORSE[ord(c) - ord('a')] for c in word)
+                for word in words}    # ''.join() combine with seperator as ''
+
+        return len(seen)
+        
+        
+        
+        
