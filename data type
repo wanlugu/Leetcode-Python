@@ -2,7 +2,8 @@
 x = [1,2] same with x = ([1,2])
 x.append(1), x. extend(1), x.extend([1]) returns [1,2,1]
 x.append([1]) returns [1,2,[1]]
-
+x = [1]*10, return a list of ten 1
+x = [2]*2*3 return 6 of 2
 
 # pandas.dataframe
 pandas.DataFrame([data, index, columns, dtype, copy])
@@ -15,5 +16,11 @@ df
 
 df.size = col *row
 df.shape = (row,col)
-df.columns, df.rows  return labels 
+df.columns, df.rows:  return labels 
+
+df.reset_index(drop=True): add a new 0-n index, and delete original index
+df.reindex(a list): extract rows in list, and in the order of list
+df.rename(index=str, columns={"A": "a", "B": "c"})
+df.rename(str.lower, axis='columns')
+df.rename({1: 2, 2: 4}, axis='index'): rename the index or columns
 
