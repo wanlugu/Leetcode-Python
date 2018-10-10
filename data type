@@ -4,6 +4,18 @@ x.append(1), x. extend(1), x.extend([1]) returns [1,2,1]
 x.append([1]) returns [1,2,[1]]
 x = [1]*10, return a list of ten 1
 x = [2]*2*3 return 6 of 2
+[1, 2, 3] + [4, 5, 6]	returns [1, 2, 3, 4, 5, 6]
+len(x) # the length of a list
+max(x) # the maximum in a list
+
+
+
+
+
+
+
+
+
 
 # pandas.dataframe
 pandas.DataFrame([data, index, columns, dtype, copy])
