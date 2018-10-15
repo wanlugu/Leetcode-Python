@@ -2,12 +2,27 @@
 x = [1,2] same with x = ([1,2])
 x.append(1), x. extend(1), x.extend([1]) returns [1,2,1]
 x.append([1]) returns [1,2,[1]]
+x.insert(i,m) insert m at position i
+# 
 x = [1]*10, return a list of ten 1
 x = [2]*2*3 return 6 of 2
 [1, 2, 3] + [4, 5, 6]	returns [1, 2, 3, 4, 5, 6]
 no minus for list
+# remove
 list.pop(obj=list[-1]) #Removes and returns last object or obj from list
-del list[i]
+list.remove(x) # remove the first value of x
+del list[i], del list[:]=list.clear()
+# list search
+list.index(x[, start[, end]])
+#Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there is no such item.
+list.count(x)
+#Return the number of times x appears in the list.
+list.sort(key=None, reverse=False)
+#Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their explanation).
+list.reverse()
+#Reverse the elements of the list in place. change the order of list
+list.copy()
+Return a shallow copy of the list. Equivalent to a[:].
 len(x) # the length of a list
 max(x) # the maximum in a list
 
