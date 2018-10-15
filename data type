@@ -5,8 +5,14 @@ x.append([1]) returns [1,2,[1]]
 x = [1]*10, return a list of ten 1
 x = [2]*2*3 return 6 of 2
 [1, 2, 3] + [4, 5, 6]	returns [1, 2, 3, 4, 5, 6]
+no minus for list
+list.pop(obj=list[-1]) #Removes and returns last object or obj from list
 len(x) # the length of a list
 max(x) # the maximum in a list
+list(tuple or set) # convert to list type
+# difference of two list
+by set(): list( set(list1)-set(list2) )
+list( set(list1).symmetric_difference(set(list2)) )
 
 
 
