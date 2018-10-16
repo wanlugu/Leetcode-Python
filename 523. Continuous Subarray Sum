@@ -59,3 +59,7 @@ class Solution(object):
                 lookup[count] = i
 
         return False
+
+
+
+enumerate(list,i), 遍历list,从i开始计数。 需要转换成list(enumerate(list,i))
