@@ -91,3 +91,15 @@ def reverse(string):
     return string 
 
 把string的element逐个append到stack上，再pop (last element)给string
+
+
+######################  Using reversed ##############################
+# Python code to reverse a string  
+# using reversed() 
+  
+# Function to reverse a string 
+def reverse(string): 
+    string = "".join(reversed(string)) 
+    return string 
+  
+reversed()可以用在list和string上，返回list，所以要join()
