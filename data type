@@ -19,10 +19,10 @@ list.count(x)
 #Return the number of times x appears in the list.
 list.sort(key=None, reverse=False)
 #Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their explanation).
-list.reverse()
+list.reverse() = list(reversed(list))
 #Reverse the elements of the list in place. change the order of list
 list.copy()
-Return a shallow copy of the list. Equivalent to a[:].
+#Return a shallow copy of the list. Equivalent to a[:].
 len(x) # the length of a list
 max(x) # the maximum in a list
 
@@ -30,6 +30,7 @@ list(tuple or set) # convert to list type
 # difference of two list
 by set(): list( set(list1)-set(list2) )
 list( set(list1).symmetric_difference(set(list2)) )
+
 
 
 
@@ -45,7 +46,9 @@ a.lower()， a.upper() 返回小写大写模式（只针对字母）
 a.replace("H", "J")
 a.split(",") 用，分隔成多个element
 a+a returns 'Hello, World!Hello, World!' 合并string
-
+reversed(a) 返回reversed objective
+list(reversed(a))
+['!', 'd', 'l', 'r', 'o', 'W', ' ', ',', 'o', 'l', 'l', 'e', 'H']
 ##################### pandas.dataframe###########################
 pandas.DataFrame([data, index, columns, dtype, copy])
 d = {'col1': [1, 2], 'col2': [3, 4]}
