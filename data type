@@ -35,20 +35,27 @@ list( set(list1).symmetric_difference(set(list2)) )
 
 
 
-
-
-
 ########################### string ############################
 a = "Hello, World!"
 print(a[1]), 引用
 a.strip() 去除两边多余空格
 a.lower()， a.upper() 返回小写大写模式（只针对字母）
-a.replace("H", "J")
+a.replace("H", "J"), 暂时，并不改变a
 a.split(",") 用，分隔成多个element
 a+a returns 'Hello, World!Hello, World!' 合并string
 reversed(a) 返回reversed objective
 list(reversed(a))
 ['!', 'd', 'l', 'r', 'o', 'W', ' ', ',', 'o', 'l', 'l', 'e', 'H']
+
+
+
+################ dictionary #########################
+
+
+
+
+
+
 ##################### pandas.dataframe###########################
 pandas.DataFrame([data, index, columns, dtype, copy])
 d = {'col1': [1, 2], 'col2': [3, 4]}
