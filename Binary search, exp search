@@ -1,0 +1,44 @@
+#code
+class Solution(object):
+    def exo_search(self, arr, x):
+        n = len(arr)
+        sub = 0
+        while 2**sub < n and arr[2**sub-1]<x:
+            sub += 1
+            
+        return self.BS(arr,2**(sub-1),min(2**sub,n)-1,x)
+    
+    # BS
+    def BS(self,arr,l,r,x): # l and r are all included
+        while r >= l:    # = is to check the corner value
+            
+            mid = l+ (r-l)/2   # sometimes can use floor()
+            if arr[mid] == x:
+                return mid
+            elif arr[mid]<x:
+                l = mid+1
+            elif arr[mid]>x:
+                r = mid-1
+                
+      # BS2 use recursion
+         def BS(self,arr,l,r,x): # l and r are all included
+        while r >= l:    # = is to check the corner value
+            mid = l+ (r-l)/2   # sometimes can use floor()
+            if arr[mid] == x:
+                return mid
+            elif arr[mid]<x:
+                return  BS(self,arr,mid+1,r,x)
+            elif arr[mid]>x:
+                 BS(self,arr,l,mid-1,x)
+       
+# check results
+arr = [1,3,4,5,9,10,23,40] 
+n = len(arr) 
+x = 10
+S = Solution()
+result = S.exo_search(arr, x) 
+if result == -1: 
+    print "Element not found in thye array"
+else: 
+    print "Element is present at index %d" %(result) 
+  
