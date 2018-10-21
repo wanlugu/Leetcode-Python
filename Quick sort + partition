@@ -1,0 +1,24 @@
+def partition(arr,low, high):
+    
+    piv = arr[high]
+    i = low -1
+    for j in range(low,high+1):
+        if arr[j] <= piv:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    return (i)
+    
+def QuickSort(arr, low, high):
+    
+    if low < high:
+         s = partition(arr,low,high)
+         
+         QuickSort(arr,low, s-1)
+         QuickSort(arr, s, high)
+         
+t = int(input())
+for i in range(t):
+    _ = int(input())
+    arr = list(map(int,input().split()))
+    QuickSort(arr,0,len(arr)-1)
+    print(*arr)                        # only print the elements, no [] and ,
