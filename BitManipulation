@@ -1,0 +1,11 @@
+# To integer
+int('00100001', 2) # return 33
+# To hex string
+print "0x%x" % int('11111111', 2)
+0xff
+#To character
+chr(int('111011', 2))
+# Characters to integers
+ord('u')  return 117
+#Individual bits
+a << b  equals a*2^b
