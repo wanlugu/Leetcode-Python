@@ -1,0 +1,15 @@
+def traverse_level_order( root ):
+    # Code here
+    if root ==None:
+        return
+    if root:
+        arr = []
+        arr.append(root)
+        while arr:
+            print (arr[0].data,end=" ")   # python3 需要结尾，python2加，不会换行
+            temp = arr.pop(0)
+            
+            if temp.left is not None:
+                arr.append(temp.left)
+            if temp.right is not None:
+                arr.append(temp.right) 
