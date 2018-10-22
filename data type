@@ -31,6 +31,11 @@ list(tuple or set) # convert to list type
 by set(): list( set(list1)-set(list2) )
 list( set(list1).symmetric_difference(set(list2)) )
 
+# use as queue, can implement a package
+from collections import deque
+queue = deque(["Eric", "John", "Michael"])
+queue.append("Terry")           # Terry arrives
+queue.popleft()                 # The first to arrive now leaves
 
 
 
