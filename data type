@@ -51,8 +51,11 @@ a+a returns 'Hello, World!Hello, World!' 合并string
 reversed(a) 返回reversed objective
 list(reversed(a))
 ['!', 'd', 'l', 'r', 'o', 'W', ' ', ',', 'o', 'l', 'l', 'e', 'H']
-
-
+a.isalpha(), a.isalnum, isspace()  return true or false
+str.count(substring, beg, end)
+str.center(length,"-"), str.ljust(length,"-"), str.rjust(length,"-") , 扩展成length长，用-填充 
+str = "_"
+print ( str.join(str1))  return 'geeks_for_geeks'
 
 ################ dictionary #########################
 dict = {'a': 1, 'b': 2, 'b': '3'}
