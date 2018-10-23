@@ -48,3 +48,44 @@ class Solution(object):
                 out += arr[x]
 
         return out
+
+######################## 如果两个出现次数一样的占用不同排名 ############3
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        n = len(nums)
+        fre = {}
+        dic = {}
+        for i in range(0,n):
+            if nums[i] not in list(dic.keys()):
+                
+                dic2 = { nums[i]:1}
+                dic.update(dic2)
+            else:
+                dic[nums[i]] += 1
+        for pair in list(dic.items()):
+            
+            val = pair[1]
+            if val not in fre:
+                fre[val]=[pair[0]]
+            else:
+                fre[val].append(pair[0])
+        arr = []
+        for count in range(n,0,-1):
+            if count in fre:
+                
+                    arr.extend(fre[count])
+                    
+        out = []
+        if k> len(arr):
+            for x in range(0,len(arr)):
+                out.append(arr[x])
+        else:
+            for x in range(0,k):        
+                out.append( arr[x])
+
+        return out
