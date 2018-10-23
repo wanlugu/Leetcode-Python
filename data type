@@ -55,7 +55,16 @@ list(reversed(a))
 
 
 ################ dictionary #########################
-
+dict = {'a': 1, 'b': 2, 'b': '3'}
+dict['a'] return 1
+change dict['b']=4
+del dict['a']
+dict.clear() 清空
+del dict 删除
+dict.keys() 返回所有key
+dict.values() 返回所有值
+dict.update(dict2), dic2 merge 到dic1里
+dict.items() 返回list， 每一对都是一个tuple
 
 
 
