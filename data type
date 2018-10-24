@@ -25,6 +25,8 @@ list.copy()
 #Return a shallow copy of the list. Equivalent to a[:].
 len(x) # the length of a list
 max(x) # the maximum in a list
+#2D list
+[[0]*d for _ in range(a)] return a*d array, otherwise, can not change value correctly
 
 list(tuple or set) # convert to list type
 # difference of two list
