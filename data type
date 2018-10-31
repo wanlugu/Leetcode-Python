@@ -70,8 +70,10 @@ dict.keys() 返回所有key
 dict.values() 返回所有值
 dict.update(dict2), dic2 merge 到dic1里
 dict.items() 返回list， 每一对都是一个tuple
-
-
+# sort by key
+sorted(dict.keys()), sorted(dict)  # only return list of keys
+# sort by value
+sorted(dict.values()) # only return list of values
 
 
 
