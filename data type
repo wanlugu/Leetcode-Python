@@ -56,6 +56,9 @@ heapq.heappush(heap, (5,'five'))
 heapq.heappop(heap) # pop (1,'one')
 # the smallest
 print heap[0]
+# transform list to heap
+heap = [(1, 'one'), (10, 'ten'), (5,'five')]
+heapq.heapify(heap)
 
 ########################### string ############################
 a = "Hello, World!"
