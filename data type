@@ -39,8 +39,23 @@ queue = deque(["Eric", "John", "Michael"])
 queue.append("Terry")           # Terry arrives
 queue.popleft()                 # The first to arrive now leaves
 
+# priorityqueue
+import queue as Q
+q = Q.PriorityQueue()
+q.put((5,"wu"))
+q.put((1,"yi"))
+q.get() # return (1,"yi")
 
+# heap, Heaps are binary trees for which every parent node has a value less than or equal to any of its children.
+import heapq
+heap = []
+heapq.heappush(heap, (1, 'one'))
+heapq.heappush(heap, (10, 'ten'))
+heapq.heappush(heap, (5,'five'))
 
+heapq.heappop(heap) # pop (1,'one')
+# the smallest
+print heap[0]
 
 ########################### string ############################
 a = "Hello, World!"
