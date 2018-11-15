@@ -60,6 +60,11 @@ print heap[0]
 heap = [(1, 'one'), (10, 'ten'), (5,'five')]
 heapq.heapify(heap)
 
+# set()
+set(list) return {unique values in list}
+set(string) return {unique elements in string}
+setA | setB or setA.union(setB), x1.difference(x2) or x1-x2
+a.intersection(b, c, d) or a &b&c&d
 ########################### string ############################
 a = "Hello, World!"
 print(a[1]), 引用
