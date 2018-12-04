@@ -7,15 +7,26 @@ import numpy as np
 np.random.seed(0)  # seed for reproducibility
 x1 = np.random.randint(10, size=(2,4)) 
 x1.ndim, x1.shape, x1.size, x1.dtype
-# array slicing
+### array slicing
 x[1::2], from index 1 every other element
 x[::-1], just reverse
-# array copy, reshape
+### array copy, reshape
 x.copy(), the copy does not influence original
 np.arange(1, 10).reshape((3, 3))
 x[:, np.newaxis]=x.reshape(n,1), x[np.newaxis,:]=x[1:n]
-# two array
-np.concatenate([x, y])  along the first axis, 竖
-np.concatenate([x, y]，axis=1)  along the first axis， 横
+### concatenate
+#same dimension
+np.concatenate([x, x])  along the first axis, extend, two rows to four rows
+np.concatenate([y, y]，axis=1)  along the second axis， two rows to two rows
+# mixed dimension
+np.hstack([x,y])
+np.vstack([x,y]) 
+np.dstack
+### splitting
+x = [1, 2, 3, 99, 99, 3, 2, 1,0]
+x1, x2, x3 = np.split(x, [index1, index2,index3])
+upper,lower = np.vsplit(x.reshape(3,3),[2])
+left,right = np.hsplit(x.reshape(3,3),[2])
+np.dsplit
 ## rasampling, returnable
 boot = resample(data, replace=True, n_samples=4, random_state=1)
