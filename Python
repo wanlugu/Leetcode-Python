@@ -1,3 +1,21 @@
-Random number:
+## Random number ###
 from random import *
 shuffle(list), uniform(a,b), randint(a,b), sample(list,n) return list
+ 
+##### numpy #######
+import numpy as np
+np.random.seed(0)  # seed for reproducibility
+x1 = np.random.randint(10, size=(2,4)) 
+x1.ndim, x1.shape, x1.size, x1.dtype
+# array slicing
+x[1::2], from index 1 every other element
+x[::-1], just reverse
+# array copy, reshape
+x.copy(), the copy does not influence original
+np.arange(1, 10).reshape((3, 3))
+x[:, np.newaxis]=x.reshape(n,1), x[np.newaxis,:]=x[1:n]
+# two array
+np.concatenate([x, y])  along the first axis, 竖
+np.concatenate([x, y]，axis=1)  along the first axis， 横
+## rasampling, returnable
+boot = resample(data, replace=True, n_samples=4, random_state=1)
