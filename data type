@@ -88,6 +88,7 @@ dict['a'] return 1
 change dict['b']=4
 del dict['a'], dic.pop(key) 删除
 dict.clear() 清空
+len(dict) return length of dict
 
 dict.keys() 返回所有key
 dict.values() 返回所有值
