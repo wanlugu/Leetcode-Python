@@ -98,6 +98,8 @@ dict.items() 返回list， 每一对都是一个tuple
 sorted(dict.keys()), sorted(dict)  # only return list of keys
 # sort by value
 sorted(dict.values()) # only return list of values
+# sort dict by key or values, reverse or not
+sorted(ages.items(), key=lambda x: x[0], reverse=True) # return list of tuple
 # from package collections
 collections.OrderedDict()
 
