@@ -44,3 +44,12 @@ root = Node(10)
 root.PrintTree()
 
 # compare the new value with the parent node
+############## DFS #################
+## preorder (Root, Left, Right)
+def dfs(self, root):
+    out = []
+    out.append(root.val)
+    self.dfs(root.left)
+    self.dfs(root.right)
+## inorder (Left, Root, Right)
+## postorder (Left, Right, Root)
