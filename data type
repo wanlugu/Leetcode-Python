@@ -19,7 +19,7 @@ list.count(x)
 #Return the number of times x appears in the list.
 list.sort(key=None, reverse=False)
 #Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their explanation).
-list.reverse() = list(reversed(list))
+list.reverse() = list(reversed(list)), list[::-1]
 #Reverse the elements of the list in place. change the order of list
 list.copy()
 #Return a shallow copy of the list. Equivalent to a[:].
