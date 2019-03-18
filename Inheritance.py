@@ -7,7 +7,7 @@ Type "copyright", "credits" or "license()" for more information.
 
     def inputSides(self):
         self.sides = [float(input("Enter side "+str(i+1)+" : ")) for i in range(self.n)]
-
+    # input("Enter side "+str(i+1)+" : ") 显示Enter side 1： 让你输入值， 再Enter side 2： 输入值 。。。
     def dispSides(self):
         for i in range(self.n):
             print("Side",i+1,"is",self.sides[i])
