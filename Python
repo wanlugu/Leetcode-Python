@@ -53,9 +53,12 @@ print("is %.2f"%data) keep 2 digit after decimal
 round(x,10), "%10g", $.10g$
 
 
-
-
-
+# zip
+# Return a list of tuples, where each tuple contains the i-th element
+# from each of the argument sequences.  The returned list is truncated
+# in length to the length of the shortest argument sequence.
+A0 = dict(zip(('a','b','c','d','e'),(1,2,3,4,5)))
+return A0 = {'a': 1, 'c': 3, 'b': 2, 'e': 5, 'd': 4}
 ################# 
 ###############################################
 numericVariable% 10, remainder after dividing by 10
