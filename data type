@@ -70,7 +70,7 @@ a = "Hello, World!"
 print(a[1]), 引用
 a.strip() 去除两边多余空格
 a.lower()， a.upper() 返回小写大写模式（只针对字母）
-a.replace("H", "J"), 暂时，并不改变a
+a.replace("H", "J",n), replace前n个，暂时，并不改变a
 a.split(",") 用，分隔成多个element
 a+a returns 'Hello, World!Hello, World!' 合并string
 reversed(a) 返回reversed objective
