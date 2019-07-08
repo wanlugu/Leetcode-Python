@@ -67,8 +67,10 @@ setA | setB or setA.union(setB), x1.difference(x2) or x1-x2
 a.intersection(b, c, d) or a &b&c&d
 ########################### string ############################
 a = "Hello, World!"
-print(a[1]), 引用
+print(a[1]) 引用
+# only return a copy of string with the following functions
 a.strip() 去除两边多余空格
+a.strip([char]) #delete character combination in the [char] both leading and trailing
 a.lower()， a.upper() 返回小写大写模式（只针对字母）
 a.replace("H", "J",n), replace前n个，暂时，并不改变a
 a.split(",") 用，分隔成多个element
