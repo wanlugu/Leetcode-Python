@@ -104,6 +104,8 @@ sorted(dict.values()) # only return list of values
 sorted(ages.items(), key=lambda x: x[0], reverse=True) # return list of tuple
 # from package collections
 collections.OrderedDict()
+# dictionary comprehension
+dict = {w[0]:i for i,w in enumerate(list)} #same with# = {w:list.index(w,_) for w,_ in list} # list is a list of pairs
 
 
 ##################### pandas.dataframe###########################
