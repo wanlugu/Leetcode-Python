@@ -35,7 +35,15 @@ boot = resample(data, replace=True, n_samples=4, random_state=1)
 ######################## re - Regular expression operations########################
 . matches any character, ^ start with, $ end with (foo$ matches only foo)
 * matches zero or more repetitions (ab* matches a,ab,abb,...)
++ matches one or more repetitions
+? matches 0 or 1 repetition
+*?, +?, ?? from greedy to non-greedy (<.*> matches whole string while <.*?> matches as fewer as possible)
+{m}, {m,n} matches exactly m or m to n repititions
+{m,n}? matches as fewer as possible
+[] indicate a set of character
+
 re.compile('[/(){}\[\]\|@,;]') 
+re.sub(pattern, replacement, string) #replace
 ######################### pandas ####################
 data = pd.read_csv("file path")
 list(data) list(data.columns.values) get all col names
