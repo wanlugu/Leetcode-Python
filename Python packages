@@ -1,8 +1,8 @@
-## Random number ###
+######################## Random number ########################
 from random import *
 shuffle(list), uniform(a,b), randint(a,b), sample(list,n) return list
  
-##### numpy #######
+######################## numpy ########################
 import numpy as np
 np.random.seed(0)  # seed for reproducibility
 x1 = np.random.randint(10, size=(2,4)) 
@@ -32,8 +32,10 @@ np.dsplit
 boot = resample(data, replace=True, n_samples=4, random_state=1)
 
 
-
-
+######################## re - Regular expression operations########################
+. matches any character, ^ start with, $ end with (foo$ matches only foo)
+* matches zero or more repetitions (ab* matches a,ab,abb,...)
+re.compile('[/(){}\[\]\|@,;]') 
 ######################### pandas ####################
 data = pd.read_csv("file path")
 list(data) list(data.columns.values) get all col names
