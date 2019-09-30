@@ -51,6 +51,28 @@ data.head(n)
 data.iloc[r1:r2] subset by rows
 data.iloc[:,[1,2,5]] by col index
 data.loc[:,'x2':'x4'] by col names
+data['x3'] directly by col name
+
+
+# construct a dataframe
+pd.DataFrame([data, index, columns, dtype, copy])
+d = {'col1': [1, 2], 'col2': [3, 4]}
+df = pd.DataFrame(data=d)
+df
+   col1  col2
+0     1     3
+1     2     4
+
+df.size = col *row
+df.shape = (row,col)
+df.columns, df.rows:  return labels 
+
+# modifying index, colnames
+df.reset_index(drop=True): add a new 0-n index, and delete original index
+df.reindex(a list): extract rows in list, and in the order of list
+df.rename(index=str, columns={"A": "a", "B": "c"})
+df.rename(str.lower, axis='columns')
+df.rename({1: 2, 2: 4}, axis='index'): rename the index or columns
 
 data.unique() get all unique values
 data.nunique() get # of unique values
