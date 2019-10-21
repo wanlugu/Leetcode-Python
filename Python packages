@@ -22,6 +22,8 @@ np.concatenate([y, y]，axis=1)  along the second axis， two rows to two rows
 np.hstack([x,y])
 np.vstack([x,y]) 
 np.dstack
+### insert
+np.insert(arr,obj,item,axis) -- obj is the location in arr before where the item will be inserted into
 ### splitting
 x = [1, 2, 3, 99, 99, 3, 2, 1,0]
 x1, x2, x3 = np.split(x, [index1, index2,index3])
