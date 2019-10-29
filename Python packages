@@ -54,7 +54,7 @@ data.iloc[r1:r2] subset by rows
 data.iloc[:,[1,2,5]] by col index
 data.loc[:,'x2':'x4'] by col names
 data['x3'] directly by col name
-
+data[['x1','x2','x3']]
 
 # construct a dataframe
 pd.DataFrame([data, index, columns, dtype, copy])
