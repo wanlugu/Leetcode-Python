@@ -7,6 +7,7 @@ import numpy as np
 np.random.seed(0)  # seed for reproducibility
 x1 = np.random.randint(10, size=(2,4)) 
 x1.ndim, x1.shape, x1.size, x1.dtype
+np.argmax(array) #get the label of the maximum
 ### array slicing
 x[1::2], from index 1 every other element
 x[::-1], just reverse
